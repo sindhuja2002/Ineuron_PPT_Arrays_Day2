@@ -1,0 +1,21 @@
+#question 4
+def canPlaceFlowers(flowerbed, n):
+    count = 0
+    i = 0
+    while i < len(flowerbed):
+        #print(flowerbed[i],flowerbed[i-1],len(flowerbed)-1,flowerbed[i+1])
+        if flowerbed[i] == 0 and (i == 0 or flowerbed[i-1] == 0) and (i == len(flowerbed)-1 or flowerbed[i+1] == 0):
+            
+            flowerbed[i] = 1
+            count += 1
+            #print(count)
+        i += 1
+    return count >= n
+
+# Test the function
+flowerbed = [1, 0, 0, 0, 1]
+n = 1
+print(canPlaceFlowers(flowerbed, n))  # Output: True
+
+#TC - O(n)
+#SC - O(1)
