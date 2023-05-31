@@ -1,0 +1,12 @@
+#question 2
+def max_candies(candyType):
+    max_candy_count = len(set(candyType))  # Get the count of unique candy types
+    max_limit = len(candyType) // 2  # Maximum number of candies Alice can eat
+    return min(max_candy_count, max_limit)  # Return the minimum of the two values
+
+# Test the function
+candyType = [1, 1, 2, 2, 3, 3]
+print(max_candies(candyType))  # Output: 3
+
+#TC - O(n)
+#SC - o(n)
