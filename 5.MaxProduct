@@ -1,0 +1,14 @@
+#question 5
+def maximumProduct(nums):
+    nums.sort()  # Sort the array in ascending order
+    n = len(nums)
+    # The maximum product can be either the product of the three largest numbers
+    # or the product of the two smallest numbers (if there are negative numbers) and the largest number
+    return max(nums[n-1] * nums[n-2] * nums[n-3], nums[0] * nums[1] * nums[n-1])
+
+# Test the function
+nums = [1, 2, 3]
+print(maximumProduct(nums))  # Output: 6
+
+#TC - O(nlogn)---sorting array
+#SC - O(1)
