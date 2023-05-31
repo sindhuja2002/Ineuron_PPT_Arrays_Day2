@@ -1,0 +1,14 @@
+#question 1
+def array_pair_sum(nums):
+    nums.sort()  # Sort the array in ascending order
+    max_sum = 0
+    for i in range(0, len(nums), 2):
+        max_sum += nums[i]  # Add the minimum value in each pair
+    return max_sum
+
+# Test the function
+nums = [1, 4, 3, 2]
+print(array_pair_sum(nums))  # Output: 4
+
+#TC - O(nlogn)---sorting array
+#SC - O(1)----constant space ie no new space
