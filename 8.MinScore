@@ -1,0 +1,20 @@
+#question 8
+def minDifference(nums, k):
+    if len(nums) <= 4:
+        return 0
+
+    nums.sort()
+
+    min_score = float('inf')
+    for i in range(4):
+        min_score = min(min_score, nums[-4+i] - nums[i])
+
+    return min_score
+
+# Test the function
+nums = [1]
+k = 0
+print(minDifference(nums, k))  # Output: 0
+
+#TC - O(nlogn)---sorting array
+#SC - O(1)
